@@ -121,6 +121,16 @@ node scss-compile
 
 As for the jade templates inside `theme/typography/layout`, just edit them and remember to add some pepper as you like it.
 
+## Support me
+
+Please consider support me if you really like my work. `_(:з」∠)_` 
+
+![Alipay QR code](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/alipay.png?raw=true)
+
+> Scan with Alipay to buy me a cup of cappuccino.
+
 ## License
+
+© 2017 Makito
 
 Typography is released under the MIT license.
