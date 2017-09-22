@@ -1,0 +1,9 @@
+extends partial/layout
+block content
+	.autopagerize_page_element: .content
+		- page.posts.each(function (item) {
+			include mixins
+			+make_post(item, false)
+		- })
+		include mixins
+		+make_pager(__('prev'), __('next'))

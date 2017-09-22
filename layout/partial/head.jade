@@ -1,0 +1,26 @@
+meta(charset="utf-8")
+meta(name="X-UA-Compatible", content="IE=edge")
+meta(name="author", content= theme.author)
+title
+    block site_title
+        = config.title
+block description
+    meta(name="description", content= config.description ? config.description : 'A Blog Powered By Hexo')
+
+if page.keywords
+    meta(name="keywords", content= page.keywords)
+else
+    meta(name="keywords" content= config.keywords ? config.keywords : theme.keywords ? theme.keywords : "")
+
+meta(content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0",name="viewport")
+meta(content="yes",name="apple-mobile-web-app-capable")
+meta(content="black",name="apple-mobile-web-app-status-bar-style")
+meta(content="telephone=no",name="format-detection")
+
+meta(name="renderer",content="webkit")
+link(rel="short icon", href="/favicon/favicon.ico",type="image/x-icon")
+link(rel="stylesheet", href= url_for('css/bootstrap.min.css'))
+link(rel="stylesheet", href= url_for('css/font-awesome.min.css'))
+link(rel="stylesheet", href= url_for('css/typography-custom-font.css'))
+link(rel="stylesheet", href= url_for('css/style.css'))
+link(rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml")

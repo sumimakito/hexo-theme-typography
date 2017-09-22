@@ -1,0 +1,12 @@
+footer
+    - var currYear = new Date().getYear() + 1900;
+    p &copy;&nbsp;
+        !=currYear
+        | &nbsp;
+        a(target="_blank", href=config.url)!=theme.author ? theme.author : config.author ? config.author : config.title
+    p Theme&nbsp;
+        a(target="_blank", href="https://github.com/SumiMakito/hexo-theme-typography") Typography
+        | &nbsp;by&nbsp;
+        a(target="_blank", href="https://www.keep.moe") Makito
+    p Proudly published with&nbsp;
+        a(target="_blank", href="https://hexo.io") Hexo

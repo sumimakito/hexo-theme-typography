@@ -1,0 +1,32 @@
+{
+  "name": "hexo-theme-typography",
+  "version": "1.0.0",
+  "description": "Rediscover the beauty of typography.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run scss-compile",
+    "scss-compile": "node-sass raw/scss/style.scss source/css/style.css",
+    "watch": "npm run scss-compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SumiMakito/hexo-theme-typography"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "typography"
+  ],
+  "author": "Makito <master@keep.moe> (https://www.keep.moe/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/SumiMakito/hexo-theme-typography/issues"
+  },
+  "homepage": "https://github.com/SumiMakito/hexo-theme-typography/README.md",
+  "devDependencies": {},
+  "dependencies": {
+    "node-sass": "^4.5.3",
+    "scss-compile": "^0.1.7",
+    "yamljs": "^0.3.0"
+  }
+}

@@ -1,0 +1,23 @@
+doctype
+html(lang="zh-CN")
+    head
+        include head
+
+    body
+        div#stage.container
+            div.row
+                include sidebar
+                div#main-container.col-sm-9.col-xs-12.main-container.invisible
+
+                    block content
+                    div.visible-xs
+                        include footer
+
+
+        script(src= url_for('js/jquery-3.1.0.min.js'))
+        script(src= url_for('js/bootstrap.min.js'))
+        script(src= url_for('js/jquery-migrate-1.2.1.min.js'))
+        script(src= url_for('js/jquery.appear.js'))
+        script(src= url_for('js/google-analytics.js'))
+        script(src= url_for('js/typography.js'))
+

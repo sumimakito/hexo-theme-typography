@@ -1,0 +1,33 @@
+div#site-nav.site-title-links
+    ul
+        li
+            if is_home()
+                a.current(href=config.root)= __('Home')
+            else
+                a(href=config.root)= __('Home')
+        li
+            if is_archive()
+                a.current(href=config.root + "archives")= __('Archive')
+            else
+                a(href=config.root + "archives")= __('Archive')
+        include ../mixins
+        +make_page_links()
+        li.soc
+            if theme.github
+                a(href="https://github.com/" + theme.github, target="_blank")
+                    i.fa.fa-github &nbsp;
+            if theme.twitter
+                a(href="https://twitter.com/" + theme.twitter, target="_blank")
+                    i.fa.fa-twitter &nbsp;
+            if theme.instagram
+                a(href="https://www.instagram.com/" + theme.instagram, target="_blank")
+                    i.fa.fa-instagram &nbsp;
+            if theme.weibo
+                a(href="http://weibo.com/u/" + theme.weibo, target="_blank")
+                    i.fa.fa-weibo &nbsp;
+            if theme.rss
+                a(href=config.url + "/" + theme.rss, target="_blank")
+                    i.fa.fa-rss &nbsp;
+    div.visible-lg.visible-md.visible-sm
+        br
+        include footer

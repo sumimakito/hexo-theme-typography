@@ -1,0 +1,62 @@
+if theme.disqus
+    a#comments
+    #disqus_thread
+    script.
+        var disqus_shortname = '#{theme.disqus}';
+        var disqus_identifier = '#{page.path}';
+        var disqus_title = '#{page.title}';
+        var disqus_url = '#{config.url}/#{page.path}';
+        (function () {
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    script(id='dsq-count-scr' src='//#{theme.disqus}.disqus.com/count.js' async)
+
+if theme.livere
+    #lv-container(data-id='city', data-uid='#{theme.livere}')
+        script(type='text/javascript').
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') {
+                    return;
+                }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        noscript  Please activate JavaScript for write a comment in LiveRe
+
+if theme.dove
+    if theme.dove === true
+        - var domain = "Null";
+        - var matches = /https?:\/\/([^\/]+)/.exec(config.url);
+        - if(matches!==null&&matches.length>=2){
+        -   var hostname = matches[1].split(":")[0].split(".");
+        -   if(hostname.length>=2){
+        -       domain = hostname[hostname.length-2] + "." + hostname[hostname.length-1];
+        -   }else if(hostname.length==1){
+        -       domain = hostname[hostname.length-1];
+        -   }
+        - }
+        div.foreground.background-text(style="color: #fff; padding: 10px 25px; width: 100%")
+            div(style="vertical-align: middle;display: table-cell!important;")
+                div.visible-lg.visible-sm.visible-md(style="vertical-align: middle;text-align:center;margin-right:15px")
+                    img(src="/images/pigeon.svg", width="150px", style="padding: 15px; vertical-align: middle;")
+                    p(style="font-size: 55%;vertical-align: middle;text-align:center;margin: 0") 咕咕咕, 就快送到了
+            div(style="padding: 15px 0;vertical-align: middle;display: table-cell;")
+                p(style="font-size: 115%") 哎呀，似乎评论系统在您的地区都无法正常工作。
+                p(style="margin:0;") 不过不要担心，来看看我们为您准备的备用方案 ——
+                    br
+                    |         1. 将您的评论用信封装好
+                    br
+                    |         2. 使用信鸽函至&nbsp;
+                    != domain
+                    br
+                    |         3. 我们在收到您的评论后将立即审核并更新至网站
+                    br
+                    i
+                        small 评论一经采用，信函恕不退还，信鸽也不退还，请知悉。
