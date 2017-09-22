@@ -39,6 +39,14 @@ git pull
 
 Typography has packed up several labor-saving functions, thus you can easily make any change at any time in the `_config.yml` file located in the root directory of the theme.
 
+### Correctly define the title
+
+Typography has three titles: `title`, `title_primary`, and `title_secondary`. The `title` is defined in the `_config.yml` inside the Hexo blog's root directory while the `title_primary` and `title_secondary` are defined in Typography's `_config.yml`.
+
+- `title`: The `<title>` of all the HTML pages. 
+- `title_primary`: The bigger title to display on nav/side bar.
+- `title_secondary `: The smaller title to display on nav/side bar.
+
 ### Change the language
 
 Modify the `.yml` files in `themes/typography/languages` or add new files according to your need.
