@@ -1,7 +1,13 @@
 hexo-theme-Typography
 ======
 
-Typography – Rediscover the beauty of typography.
+<div style='display: inline-block; color: #fff; background: #2e405b; padding: 25px 120px 25px 40px; font-family: "HiraMinProN-W6", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC", "Source Han Sans SC", "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", "Source Sans Pro", sans-serif; -webkit-font-smoothing: antialiased; text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04);'>
+<p style="font-size: 18px; margin: 0; padding: 0">Typography.</p>
+<p style="font-size: 40px; margin: 0; padding: 0">活版印字。</p>
+<p style="font-size: 18px; margin: 0; padding: 0">Rediscover the beauty of typography.</p>
+</div>
+
+![Screenshot](https://github.com/SumiMakito/hexo-theme-typography/_art/screenshot.png)
 
 ## Install
 
