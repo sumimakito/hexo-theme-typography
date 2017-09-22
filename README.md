@@ -125,7 +125,7 @@ As for the jade templates inside `theme/typography/layout`, just edit them and r
 
 Please consider support me if you really like my work. `_(:з」∠)_` 
 
-![Alipay QR code](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/alipay.png?raw=true)
+<img width="350" src="https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/alipay.png?raw=true" alt="Alipay QR code">
 
 > Scan with Alipay to buy me a cup of cappuccino.
 
