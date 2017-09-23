@@ -114,7 +114,7 @@ Typography uses `node-sass` and `scss-compile` to generate `.css` files for styl
 
 ```bash
 cd theme/typography
-node scss-compile
+npm run scss-compile
 ```
 
 ## Customize<sup>3</sup>
