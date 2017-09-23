@@ -117,6 +117,8 @@ cd theme/typography
 npm run scss-compile
 ```
 
+> `.scss` files are located in `theme/typography/raw/scss`.
+
 ## Customize<sup>3</sup>
 
 As for the jade templates inside `theme/typography/layout`, just edit them and remember to add some pepper as you like it.
