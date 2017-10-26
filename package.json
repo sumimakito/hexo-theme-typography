@@ -18,7 +18,7 @@
     "typography"
   ],
   "author": "Makito <master@keep.moe> (https://www.keep.moe/)",
-  "license": "GPL-3.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/SumiMakito/hexo-theme-typography/issues"
   },
