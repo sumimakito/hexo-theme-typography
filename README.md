@@ -11,21 +11,48 @@ hexo-theme-Typography
 
 ```bash
 cd hexo # cd into the root directory of your Hexo blog
-npm install --save hexo-renderer-jade hexo-generator-archive
+
+npm install --save hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
+
+npm uninstall --save hexo-generator-category # use hexo-generator-category-enhance instead
+
 git clone https://github.com/SumiMakito/hexo-theme-typography themes/typography
-cd theme/typography
+
+cd themes/typography
+
 npm install
 ```
 
-> You can skip the second line provided you have already installed `hexo-renderer-jade` and `hexo-generator-archive` in your Hexo blog's root directory.
+> You can skip the second line provided you have already installed `hexo-renderer-jade` , `hexo-generator-category-enhance `, `hexo-generator-feed`, `hexo-generator-tag` and `hexo-generator-archive` in your Hexo blog's root directory.
 
 ### Modify the config file
 
-Find `theme:` in your `_config.yml` at the root directory of your Hexo blog, and change that line into `theme: typography`, then add these lines:
+Find `theme:` in your `_config.yml` at the root directory of your Hexo blog, and change that line into `theme: typography`, set `language` to `zh-cn` or `en` as you like , then add these lines:
 
 ```yaml
+# Generate archive page
 archive_generator:
   per_page: 0
+
+# Generate categories index page and each category page
+category_generator:
+  per_page: 10
+  enable_index_page: true
+
+# Generate tags index page and each tag page
+tag_generator:
+  per_page: 10
+  enable_index_page: true
+
+# Generator atom feed for you website
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
 ```
 
 ## Update
@@ -59,6 +86,16 @@ It is possible to control the length for all the summaries on the index page by 
 
 e.g. `truncate_len: 160`
 
+### Set up theme color style
+
+You can choose two color styles:
+- light
+- dark
+
+``` yaml
+themeStyle: light # light, dark
+```
+
 ### Set up the comment service
 
 The comment box is a place for readers to exchange their ideas with the author. Typography has integrated two 3rd-party comment services, and they are ready to use at any time.
@@ -68,6 +105,37 @@ Currently, Typography supports comment services provided by [Disqus](https://dis
 e.g. `disqus: disqus_shortname` OR `livere: livere_data_uid`
 
 > Do not use two comment services at the same time, or the post will be followed by two comment boxes. Just leave blank for the rest of the comment service-related options.
+
+### Set up pagination style
+
+You can choose two styles to show pagination:
+- simple: just show previous page and next page link
+- show page count: except page link, still show what current page number is and how many pages in total, set below to true in Typography's _config.yml:
+
+```yaml
+showPageCount: true
+```
+
+### Show categories and tags links behind post title
+
+You can choose to show categories and tags links behind post title in index and post page:
+
+``` yaml
+showCategories: true
+showTag: true
+```
+### Set up website favicon
+
+Prepare `favicon.png` file and put in `themes/typography/source/images/favicon.png`
+
+### Set up google analytics id
+
+Open file: `themes/typography/source/js/google-analytics.js`
+
+Find this line:
+`ga('create', 'UA-73442912-1', 'auto');`
+
+Change ` 'UA-73442912-1'` to your google analytics id
 
 ### SEO-friendly meta description tag
 
@@ -113,7 +181,7 @@ github: user_name
 Typography uses `node-sass` and `scss-compile` to generate `.css` files for styling. We have provided several options such as background and foreground colors for you to choose. When your editing is finished, don't forget to run the commands below to re-generate the `.css` files:
 
 ```bash
-cd theme/typography
+cd themes/typography
 npm run scss-compile
 ```
 

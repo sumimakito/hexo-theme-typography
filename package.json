@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run scss-compile",
-    "scss-compile": "node-sass raw/scss/style.scss source/css/style.css",
+    "scss-compile": "node-sass raw/scss/style.scss source/css/style.css && node-sass raw/scss/style-dark.scss source/css/style-dark.css",
     "watch": "npm run scss-compile"
   },
   "repository": {

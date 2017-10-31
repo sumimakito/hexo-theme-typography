@@ -31,12 +31,12 @@ block content
                         a(role="navigation",href=url_for(prev), title=page.prev.title)
                             i.fa.fa-angle-double-left
                             |&nbsp;
-                            != __('prev_post')
-                    span &nbsp;
+                            != __('prev_post')+': ' + page.prev.title
+                    p &nbsp;
                 if next
                     span.next.pagbuttons
                         a(role="navigation",href=url_for(next), title=page.next.title)
-                            != __('next_post')
+                            != __('next_post')+': ' + page.next.title
                             |&nbsp;
                             i.fa.fa-angle-double-right
         include partial/comments
