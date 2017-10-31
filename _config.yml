@@ -2,11 +2,11 @@ title_primary: "活版印字" # the bigger text
 title_secondary: "Typography" # the smaller text
 keywords:
 
-twitter: # user_name
+twitter: #username
 rss: atom.xml
-weibo: # user_id/permanent_name
-instagram: # user_name
-github: # user_name
+weibo: #username/id
+instagram: #username
+github: #username
 
 # Choose the comment service according to your need.
 # Please do not use the two services at the same time.
@@ -14,12 +14,12 @@ livere: # [data-uid] on livere.com
 disqus: # [short_name] on disqus.com
 dove: # For fun ONLY. Set to true to 'disable' comments on your site.
 
-# Set true to show current page number and total page count beyond page link.
+# Set true to show the page indicator.
 showPageCount: true
 
-# Set true to show category or tags behind post title.
+# Set true to show category or tags behind post titles
 showCategories: true
-showTag: true
+showTags: true
 
-# Choose theme style
-themeStyle: dark # light, dark
+# Color scheme
+themeStyle: light # light/dark

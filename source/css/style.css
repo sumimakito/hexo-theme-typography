@@ -426,7 +426,8 @@ a:hover {
   border-bottom: solid transparent 2px; }
 
 a:focus {
-  text-decoration: none; }
+  text-decoration: none;
+  color: black; }
 
 .a-title {
   text-decoration: none;
@@ -636,7 +637,7 @@ figure .code pre {
     padding-bottom: 20px; }
   .main-container {
     padding-top: 40px;
-    padding-bottom: 20px; } }
+    padding-bottom: 60px; } }
 
 @media only screen and (max-height: 600px) {
   body {

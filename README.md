@@ -9,17 +9,14 @@ hexo-theme-Typography
 
 ### Install dependencies
 
+*Do not simply copy and paste the whole block of codes, please take a carefully look in advance. :)*
+
 ```bash
 cd hexo # cd into the root directory of your Hexo blog
-
 npm install --save hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
-
 npm uninstall --save hexo-generator-category # use hexo-generator-category-enhance instead
-
 git clone https://github.com/SumiMakito/hexo-theme-typography themes/typography
-
 cd themes/typography
-
 npm install
 ```
 
@@ -68,7 +65,7 @@ git pull
 
 Typography has packed up several labor-saving functions, thus you can easily make any change at any time in the `_config.yml` file located in the root directory of the theme.
 
-### Correctly define the title
+### Correctly define the title<sup>* Important *</sup>
 
 Typography has three titles: `title`, `title_primary`, and `title_secondary`. The `title` is defined in the `_config.yml` inside the Hexo blog's root directory while the `title_primary` and `title_secondary` are defined in Typography's `_config.yml`.
 
@@ -86,14 +83,17 @@ It is possible to control the length for all the summaries on the index page by 
 
 e.g. `truncate_len: 160`
 
-### Set up theme color style
+### Changing the color scheme
 
-You can choose two color styles:
+You can find this option in theme's `_config.yml`.
+
+Currently, there are two color schemes available: 
+
 - light
 - dark
 
 ``` yaml
-themeStyle: light # light, dark
+themeStyle: light
 ```
 
 ### Set up the comment service
@@ -106,36 +106,33 @@ e.g. `disqus: disqus_shortname` OR `livere: livere_data_uid`
 
 > Do not use two comment services at the same time, or the post will be followed by two comment boxes. Just leave blank for the rest of the comment service-related options.
 
-### Set up pagination style
+### Show/Hide the page indicator
 
-You can choose two styles to show pagination:
-- simple: just show previous page and next page link
-- show page count: except page link, still show what current page number is and how many pages in total, set below to true in Typography's _config.yml:
+Set to false to hide the page indicator above the page switcher.
 
 ```yaml
 showPageCount: true
 ```
 
-### Show categories and tags links behind post title
+### Show/Hide categories and tags links behind post title
 
-You can choose to show categories and tags links behind post title in index and post page:
+You can choose whether or not to show categories and tags links behind post title in index and post page by changing the following values in theme's `_config.yml`:
 
 ``` yaml
 showCategories: true
 showTag: true
 ```
-### Set up website favicon
+### Set website favicon
 
 Prepare `favicon.png` file and put in `themes/typography/source/images/favicon.png`
 
-### Set up google analytics id
+### Embed Google Analytics in your blog
 
-Open file: `themes/typography/source/js/google-analytics.js`
+Find the line below in `themes/typography/source/js/google-analytics.js`:
 
-Find this line:
 `ga('create', 'UA-73442912-1', 'auto');`
 
-Change ` 'UA-73442912-1'` to your google analytics id
+Replace `UA-73442912-1` with your own google analytics id.
 
 ### SEO-friendly meta description tag
 
@@ -178,7 +175,7 @@ github: user_name
 
 ## Customize<sup>2</sup>
 
-Typography uses `node-sass` and `scss-compile` to generate `.css` files for styling. We have provided several options such as background and foreground colors for you to choose. When your editing is finished, don't forget to run the commands below to re-generate the `.css` files:
+Typography uses `node-sass` and `scss-compile` to generate `.css` files for styling. We have provided several options such as background and foreground colors for you to choose. When your editing is finished, **do not** forget to run the commands below to re-generate the `.css` files:
 
 ```bash
 cd themes/typography
@@ -191,11 +188,16 @@ npm run scss-compile
 
 As for the jade templates inside `theme/typography/layout`, just edit them and remember to add some pepper as you like it.
 
+## Contributors
+
+- [Makito](https://github.com/SumiMakito)
+- [pmtao](https://github.com/pmtao)
+
 ## Support me
 
 Please consider support me if you really like my work. `_(:з」∠)_` 
 
-<img width="350" src="https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/alipay.png?raw=true" alt="Alipay QR code">
+<img width="240" src="https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/alipay.png?raw=true" alt="Alipay QR code">
 
 > Scan with Alipay to buy me a cup of cappuccino.
 

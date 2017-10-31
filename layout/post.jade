@@ -32,8 +32,8 @@ block content
                             i.fa.fa-angle-double-left
                             |&nbsp;
                             != __('prev_post')+': ' + page.prev.title
-                    p &nbsp;
                 if next
+                    span &nbsp;
                     span.next.pagbuttons
                         a(role="navigation",href=url_for(next), title=page.next.title)
                             != __('next_post')+': ' + page.next.title

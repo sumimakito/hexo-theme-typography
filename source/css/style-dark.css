@@ -224,14 +224,14 @@ h4,
 h5,
 h6 {
   /*
-  font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC",
-  "Source Sans Pro", "Source Han Sans SC", "Source Han Sans TC",
-  "PingFang SC", "PingFang HK", "PingFang TC", sans-serif;
-  */
+font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC",
+"Source Sans Pro", "Source Han Sans SC", "Source Han Sans TC",
+"PingFang SC", "PingFang HK", "PingFang TC", sans-serif;
+*/
   /*
-  font-family: "PT Serif", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC", "Source Han Sans SC",
-   "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", "Source Sans Pro", sans-serif;
-   */
+font-family: "PT Serif", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC", "Source Han Sans SC",
+ "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", "Source Sans Pro", sans-serif;
+ */
   font-family: "Source Han Sans SC", "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", "Source Sans Pro", sans-serif;
   color: #ffffff; }
 
@@ -426,7 +426,8 @@ a:hover {
   border-bottom: solid transparent 2px; }
 
 a:focus {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #b3b3b3; }
 
 .a-title {
   text-decoration: none;
@@ -636,7 +637,7 @@ figure .code pre {
     padding-bottom: 20px; }
   .main-container {
     padding-top: 40px;
-    padding-bottom: 20px; } }
+    padding-bottom: 60px; } }
 
 @media only screen and (max-height: 600px) {
   body {

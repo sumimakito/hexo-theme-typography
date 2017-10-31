@@ -22,7 +22,7 @@ mixin make_post(item, is_detail)
                             a.a-tag(href=config.root + item.path, title= item.name)= item.name
                             span &nbsp;
                             - });
-            if theme.showTag
+            if theme.showTags
                 if item.tags
                     if item.tags.length > 0
                         span.meta-item
@@ -57,13 +57,15 @@ mixin make_pager()
                 p
                     != ' ' + __('PageNumber', page.current) + ' / ' + __('PageCount', page.total) + ' '
                     | &nbsp;
-            if page.prev
+            p
+                if page.prev
                 span.pre.pagbuttons
                     i.fa.fa-angle-double-left
                     | &nbsp;
                     a(role="navigation",href=url_for(prev))= __('prev')
-                    span &nbsp;
-            if page.next
+
+                if page.next
+                span &nbsp;
                 span.next.pagbuttons
                     a(role="navigation",href=url_for(next))= __('next')
                     | &nbsp;
