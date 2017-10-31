@@ -12,3 +12,8 @@ About: 关于
 Links: 链接
 Comments: 评论
 posted_at: 发布于
+TagCount: '%d 篇'
+ArchiveCount: '%d 篇'
+CategoriesCount: '%d 篇'
+PageCount: '共 %d 页'
+PageNumber: '第 %d 页'

@@ -12,3 +12,8 @@ About: 關於
 Links: 連結
 Comments: 評論
 posted_at: 發佈於
+TagCount: '%d 篇'
+ArchiveCount: '%d 篇'
+CategoriesCount: '%d 篇'
+PageCount: '共 %d 頁'
+PageNumber: '第 %d 頁'

@@ -11,5 +11,9 @@ block content
     .autopagerize_page_element: .content
         .archive.animated.fadeInDown
             ul.list-with-title
+                p.post-title
+                        != __("Categories")+' ' + page.category
                 include mixins
                 +postList()
+                include mixins
+                +make_pager(__('prev'), __('next'))

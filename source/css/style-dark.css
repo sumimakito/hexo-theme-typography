@@ -233,22 +233,22 @@ h6 {
    "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", "Source Sans Pro", sans-serif;
    */
   font-family: "Source Han Sans SC", "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", "Source Sans Pro", sans-serif;
-  color: #2e405b; }
+  color: #ffffff; }
 
 html {
-  background: #ffffff; }
+  background: #2e405b; }
 
 .foreground {
-  background: #2e405b !important; }
-
-.background {
   background: #ffffff !important; }
 
+.background {
+  background: #2e405b !important; }
+
 .foreground-text * {
-  color: #2e405b !important; }
+  color: #ffffff !important; }
 
 .background-text * {
-  color: #ffffff !important; }
+  color: #2e405b !important; }
 
 h1 {
   font-size: 42px; }
@@ -271,7 +271,7 @@ h6 {
 body {
   font-size: 18px;
   line-height: 1.5em;
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==");
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi/P//Py8DpQCXISBxJlING4QaGEdDiQgAEGAAg8sST3LGZYoAAAAASUVORK5CYII=");
   background-repeat: repeat;
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
@@ -343,17 +343,17 @@ body {
   text-align: left;
   font-size: 0.5em;
   padding: 0 0 50px 0;
-  border-left: solid #2e405b 2px;
+  border-left: solid #ffffff 2px;
   transition: padding 0.8s ease 0s, background 0.8s ease 0s; }
 
 .site-title:hover {
   padding: 15px 0 35px 0;
-  color: #ffffff !important;
-  background: #2e405b !important;
-  border-left: solid #2e405b 2px; }
+  color: #2e405b !important;
+  background: #ffffff !important;
+  border-left: solid #ffffff 2px; }
 
 .site-title:hover * {
-  color: #ffffff !important; }
+  color: #2e405b !important; }
 
 .site-title * {
   text-align: left;
@@ -394,7 +394,7 @@ body {
   font-size: 18px; }
 
 .site-title-links a {
-  border-bottom: solid #2e405b 2px; }
+  border-bottom: solid #ffffff 2px; }
 
 .no-margin-left {
   margin-left: 0; }
@@ -409,19 +409,19 @@ body {
   margin-bottom: 0; }
 
 a {
-  color: #2e405b;
+  color: #ffffff;
   transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
   -moz-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
   -o-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
   -webkit-transition: color 0.3s ease 0s, background-color 0.3s ease 0s;
-  border-bottom: solid #2e405b 2px;
+  border-bottom: solid #ffffff 2px;
   padding: 0;
   cursor: pointer;
   cursor: hand; }
 
 a:hover {
-  color: #ffffff !important;
-  background-color: #2e405b;
+  color: #2e405b !important;
+  background-color: #ffffff;
   text-decoration: none;
   border-bottom: solid transparent 2px; }
 
@@ -440,23 +440,23 @@ a:focus {
   background-color: transparent; }
 
 .current {
-  border-bottom: solid #2e405b 3px !important; }
+  border-bottom: solid #ffffff 3px !important; }
 
 .a-mute {
   background-color: transparent;
-  color: #2e405b !important;
+  color: #ffffff !important;
   text-decoration: none;
   border-bottom: none; }
 
 .a-mute:hover {
   background-color: transparent;
-  color: #2e405b !important;
+  color: #ffffff !important;
   text-decoration: none;
   border-bottom: none; }
 
 .a-mute:focus {
   background-color: transparent;
-  color: #2e405b !important;
+  color: #ffffff !important;
   text-decoration: none;
   border-bottom: none; }
 
@@ -467,13 +467,13 @@ a:focus {
   border-bottom: solid transparent 2px; }
 
 .soc a:hover {
-  color: #3f587d !important;
+  color: #e6e6e6 !important;
   background-color: transparent !important;
   text-decoration: none;
   border-bottom: solid transparent 2px; }
 
 .soc a:focus {
-  color: #3f587d !important; }
+  color: #e6e6e6 !important; }
 
 .meta-item {
   margin: 0 10px 0 0; }
@@ -573,12 +573,12 @@ figure .code pre {
     margin-left: 0 !important;
     margin-right: 0 !important; }
   .site-title:hover {
-    color: #2e405b !important;
+    color: #ffffff !important;
     background: transparent !important;
     padding: 0;
     border: none; }
   .site-title:hover * {
-    color: #2e405b !important;
+    color: #ffffff !important;
     background: transparent !important; }
   .main-container {
     text-align: left;
@@ -675,12 +675,12 @@ figure .code pre {
     margin-left: 0 !important;
     margin-right: 0 !important; }
   .site-title:hover {
-    color: #2e405b !important;
+    color: #ffffff !important;
     background: transparent !important;
     padding: 0;
     border: none; }
   .site-title:hover * {
-    color: #2e405b !important;
+    color: #ffffff !important;
     background: transparent !important; }
   .main-container {
     text-align: left;

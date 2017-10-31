@@ -1,10 +1,10 @@
 extends partial/layout
 
 block site_title
-    != page.tag + " · " + config.title
+    != __("Tags") + " · " + config.title
 
 block description
-    - var desc = __("Tags")+': ' + page.tag + ' - ' + config.title;
+    - var desc = __("Tags")+ ' - ' + config.title;
     meta(name="description", content=desc)
 
 block content
@@ -12,8 +12,7 @@ block content
         .archive.animated.fadeInDown
             ul.list-with-title
                 p.post-title
-                    != __("Tags")+' ' + page.tag
+                    != __("Tags")
                 include mixins
-                +postList()
-                include mixins
-                +make_pager(__('prev'), __('next'))
+                +tagList()
+                

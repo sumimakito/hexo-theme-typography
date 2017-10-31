@@ -7,20 +7,31 @@ mixin make_post(item, is_detail)
                 a(href= url_for(item.path))= item.title
         p.post-meta
             span.date.meta-item!=__("posted_at")+"&nbsp;" + date(item.date, 'YYYY-MM-DD')
-            if !is_detail
-                if theme.duoshuo || theme.disqus
-                    span.meta-item
-                        i.fa.fa-comment-o
-                        span &nbsp;
-                        a(href= url_for(item.path + "#comments"))= __('Comments')
-                if item.tags.length > 0
-                    span.meta-item
-                        i.fa.fa-tag
-                        span &nbsp;
-                        - item.tags.sort('posts').each(function(item) {
-                        a.a-tag(href=config.root + item.path, title= item.name)= item.name
-                        span &nbsp;
-                        - });
+            if theme.duoshuo || theme.disqus
+                span.meta-item
+                    i.fa.fa-comment-o
+                    span &nbsp;
+                    a(href= url_for(item.path + "#comments"))= __('Comments')
+            if theme.showCategories
+                if item.categories
+                    if item.categories.length > 0
+                        span.meta-item
+                            i.fa.fa-folder
+                            span &nbsp;
+                            - item.categories.sort('posts').each(function(item) {
+                            a.a-tag(href=config.root + item.path, title= item.name)= item.name
+                            span &nbsp;
+                            - });
+            if theme.showTag
+                if item.tags
+                    if item.tags.length > 0
+                        span.meta-item
+                            i.fa.fa-tag
+                            span &nbsp;
+                            - item.tags.sort('posts').each(function(item) {
+                            a.a-tag(href=config.root + item.path, title= item.name)= item.name
+                            span &nbsp;
+                            - });
         if is_detail
             p.post-abstract!= item.content
         else
@@ -30,10 +41,10 @@ mixin make_page_links()
     if site.pages
         - site.pages.each(function (page) {
             li
-                if is_current(page.path)
-                    a.current(href=config.root+page.path)= page.title
-                else
-                    a(href=config.root+page.path)= page.title
+                    if is_current(page.path)
+                        a.current(href=config.root+page.path)= page.title
+                    else
+                        a(href=config.root+page.path)= page.title
         - });
 
 
@@ -42,12 +53,16 @@ mixin make_pager()
     - var next = page.next_link
     .pagination.no-margin-bottom
         p.clearfix
+            if theme.showPageCount
+                p
+                    != ' ' + __('PageNumber', page.current) + ' / ' + __('PageCount', page.total) + ' '
+                    | &nbsp;
             if page.prev
                 span.pre.pagbuttons
-                    i.fa.fa-angle-double-right
+                    i.fa.fa-angle-double-left
                     | &nbsp;
                     a(role="navigation",href=url_for(prev))= __('prev')
-                span &nbsp;
+                    span &nbsp;
             if page.next
                 span.next.pagbuttons
                     a(role="navigation",href=url_for(next))= __('next')
@@ -80,4 +95,28 @@ mixin postList()
                     a(href= url_for(item.path), title= item.title)= item.title
                 div.post-time
                     span.ar-date= date(item.date, 'MM-DD')
+        - })
+
+mixin tagList()
+    .archive
+    ul.listing
+        - site.tags.each(function (item) {    
+        .listing-item
+            .listing-post
+                p.post-title
+                    a(href= url_for(item.path), title= item.name)= item.name
+                span.date.meta-item
+                    != __('TagCount', item.posts.length)
+        - })
+
+mixin categoryList()
+    .archive
+    ul.listing
+        - site.categories.each(function (item) {    
+        .listing-item
+            .listing-post
+                p.post-title
+                    a(href= url_for(item.path), title= item.name)= item.name
+                span.date.meta-item
+                    != __('CategoriesCount', item.posts.length)
         - })

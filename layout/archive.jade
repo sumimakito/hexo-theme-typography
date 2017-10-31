@@ -11,7 +11,10 @@ block content
     .autopagerize_page_element: .content
         .archive.animated.fadeInDown
             ul.list-with-title
+                p.post-title
+                    != __("Archive") + ' ' + __('ArchiveCount', site.posts.length)
                 include mixins
                 +postList()
-        include mixins
-        +make_pager(__('prev'), __('next'))
+        if config.archive_generator.per_page
+            include mixins
+            +make_pager(__('prev'), __('next'))

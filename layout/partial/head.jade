@@ -18,9 +18,12 @@ meta(content="black",name="apple-mobile-web-app-status-bar-style")
 meta(content="telephone=no",name="format-detection")
 
 meta(name="renderer",content="webkit")
-link(rel="short icon", href="/favicon/favicon.ico",type="image/x-icon")
+link(rel="short icon", href="/images/favicon.png",type="image/x-icon")
 link(rel="stylesheet", href= url_for('css/bootstrap.min.css'))
 link(rel="stylesheet", href= url_for('css/font-awesome.min.css'))
-link(rel="stylesheet", href= url_for('css/typography-custom-font.css'))
-link(rel="stylesheet", href= url_for('css/style.css'))
+//- link(rel="stylesheet", href= url_for('css/typography-custom-font.css'))
+if theme.themeStyle == "white"
+    link(rel="stylesheet", href= url_for('css/style.css'))
+if theme.themeStyle == "dark"
+    link(rel="stylesheet", href= url_for('css/style-dark.css'))
 link(rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml")

@@ -13,3 +13,13 @@ github: # user_name
 livere: # [data-uid] on livere.com
 disqus: # [short_name] on disqus.com
 dove: # For fun ONLY. Set to true to 'disable' comments on your site.
+
+# Set true to show current page number and total page count beyond page link.
+showPageCount: true
+
+# Set true to show category or tags behind post title.
+showCategories: true
+showTag: true
+
+# Choose theme style
+themeStyle: dark # light, dark

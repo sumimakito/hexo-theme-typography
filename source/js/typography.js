@@ -12,8 +12,9 @@ function triggerSiteNav() {
     }
 }
 function updateSidebar() {
-    if (window.innerWidth <= 768) {
+    if (window.innerWidth <= 768 || window.innerHeight <= 600) {
         $('#side-bar').innerWidth($('#stage').width());
+        $('#main-container').removeClass('col-sm-9');
         //$('#site-nav').hide();
         //siteNavShown = false;
     } else {
@@ -23,6 +24,7 @@ function updateSidebar() {
             stage.width() - $('#main-container').outerWidth() + (window.innerWidth - stage.innerWidth()) / 2;
         $('#side-bar').outerWidth(sidebarW);
         console.log("sidebarW=" + sidebarW);
+        $('#main-container').addClass('col-sm-9');
     }
 }
 $(document).ready(function () {
