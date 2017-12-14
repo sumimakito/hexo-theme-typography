@@ -2,12 +2,15 @@ $backgroundColor: #2e405b;
 $foregroundColor: #ffffff;
 // $backgroundColor: #ffffff;
 // $foregroundColor: #2e405b;
-$fontList: "Source Han Sans SC",
+$fontList: "Source Sans Pro",
+"Roboto",
+"Helvetica",
+"Helvetica Neue",
+"Source Han Sans SC",
 "Source Han Sans TC",
 "PingFang SC",
 "PingFang HK",
 "PingFang TC",
-"Source Sans Pro",
 sans-serif;
 $titleFontList: "HiraMinProN-W6",
 "Source Han Serif CN",
@@ -118,9 +121,7 @@ body {
   text-align: left;
   margin: 0;
   padding: 80px 40px;
-  overflow-x: hidden;
-  overflow-y: -moz-scrollbars-none;
-  overflow-y: scroll;
+  overflow: hidden;
   float: left;
 }
 

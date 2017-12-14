@@ -59,7 +59,10 @@ feed:
 ```bash
 cd themes/typography
 git pull
+npm run scss-compile
 ```
+
+> **We recommend you to run `npm run scss-compile` after each update, although CSS files will also be updated in each commit.**
 
 > You may encounter the error `modified: themes/typography` if you are managing the whole blog with `git`. In that case, instead of using `git push`, we recommend you to download the zip and update the theme manually.
 

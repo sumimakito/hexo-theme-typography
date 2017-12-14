@@ -224,15 +224,15 @@ h4,
 h5,
 h6 {
   /*
-  font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC",
-  "Source Sans Pro", "Source Han Sans SC", "Source Han Sans TC",
-  "PingFang SC", "PingFang HK", "PingFang TC", sans-serif;
-  */
+font-family: "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC",
+"Source Sans Pro", "Source Han Sans SC", "Source Han Sans TC",
+"PingFang SC", "PingFang HK", "PingFang TC", sans-serif;
+*/
   /*
-  font-family: "PT Serif", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC", "Source Han Sans SC",
-   "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", "Source Sans Pro", sans-serif;
-   */
-  font-family: "Source Han Sans SC", "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", "Source Sans Pro", sans-serif;
+font-family: "PT Serif", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC", "Source Han Sans SC",
+ "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", "Source Sans Pro", sans-serif;
+ */
+  font-family: "Source Sans Pro", "Roboto", "Helvetica", "Helvetica Neue", "Source Han Sans SC", "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", sans-serif;
   color: #2e405b; }
 
 html {
@@ -275,6 +275,7 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.04);
   min-height: 100vh; }
 
@@ -290,9 +291,7 @@ body {
   text-align: left;
   margin: 0;
   padding: 80px 40px;
-  overflow-x: hidden;
-  overflow-y: -moz-scrollbars-none;
-  overflow-y: scroll;
+  overflow: hidden;
   float: left; }
 
 .main-container :nth-child(1) {
@@ -361,7 +360,7 @@ body {
   margin-top: 0;
   margin-left: 10px;
   margin-right: 0;
-  font-family: "HiraMinProN-W6", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC", "Source Han Sans SC", "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", "Source Sans Pro", sans-serif;
+  font-family: "HiraMinProN-W6", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC", "Source Sans Pro", "Roboto", "Helvetica", "Helvetica Neue", "Source Han Sans SC", "Source Han Sans TC", "PingFang SC", "PingFang HK", "PingFang TC", sans-serif;
   /*font-family: "PT Serif", "Source Han Serif CN", "Source Han Serif SC", "Source Han Serif TC", "HiraMinProN-W6", "HiraMinProN-W3", serif;*/ }
 
 .site-title-large {
