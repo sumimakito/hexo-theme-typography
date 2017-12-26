@@ -180,7 +180,7 @@ github: user_name
 
 ## 深入定制
 
-「活版印字」主题使用 `node-sass` 和 `scss-compile` 来生成 `.css` 文件。我们也在里面留下了一些可定制的内容（如颜色和字体列表）。编辑结束时**不要忘记** 运行以下命令来重新生成 `.css` 文件：
+「活版印字」主题使用 `node-sass` 和 `scss-compile` 来生成 `.css` 文件。我们也在里面留下了一些可定制的内容（如颜色和字体列表）。编辑结束时**不要忘记**运行以下命令来重新生成 `.css` 文件：
 
 ```bash
 cd themes/typography
