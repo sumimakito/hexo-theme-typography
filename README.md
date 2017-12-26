@@ -200,14 +200,20 @@ As for the jade templates inside `theme/typography/layout`, just edit them and r
 
 ## Support me
 
-Please consider support me if you really like my work. `_(:з」∠)_` 
+I am a freelance student developer. (with bloody little income)
 
-<img width="240" src="https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/alipay.png?raw=true" alt="Alipay QR code">
+Please consider buy me a cup of cappuccino if you really like my work. `_(:з」∠)_` 
 
-> Scan with Alipay to buy me a cup of cappuccino.
+Thank you very much.
+
+<img width="300" src="https://raw.githubusercontent.com/SumiMakito/Misc/master/wechat-2.png" alt="WeChat QR code">
+
+<img width="240" src="https://raw.githubusercontent.com/SumiMakito/Misc/master/alipay-2.jpg" alt="Alipay QR code">
+
+> WeChat and Alipay are both accepted.
 
 ## License
 
-© 2017 Makito
+© 2017-2018 Makito
 
 Typography is released under the MIT license.
