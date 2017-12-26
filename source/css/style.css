@@ -461,7 +461,8 @@ a:focus {
   border-bottom: none; }
 
 .soc {
-  margin: 0 5px 0 0; }
+  margin: 0 5px 0 0;
+  font-size: 18px !important; }
 
 .soc a {
   border-bottom: solid transparent 2px; }
@@ -619,7 +620,9 @@ figure .code pre {
   .site-nav-footer {
     display: none !important; }
   .site-bottom-footer {
-    display: block !important; } }
+    display: block !important; }
+  li.soc {
+    margin-top: 5px !important; } }
 
 @media only screen and (max-height: 860px) {
   .site-title-large {

@@ -327,6 +327,7 @@ a:focus {
 
 .soc {
   margin: 0 5px 0 0;
+  font-size: 18px!important;
 }
 
 .soc a {
@@ -540,6 +541,9 @@ figure .code pre {
   }
   .site-bottom-footer {
     display: block !important;
+  }
+  li.soc{
+    margin-top: 5px!important;
   }
 }
 
