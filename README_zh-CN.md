@@ -5,6 +5,8 @@ hexo-theme-Typography
 
 ![Screenshot](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/screenshot.png?raw=true)
 
+[Click here to read English documentation](https://github.com/SumiMakito/hexo-theme-typography/blob/master/README.md)
+
 ## 安装
 
 ### 安装依赖项

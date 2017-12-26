@@ -5,7 +5,7 @@ hexo-theme-Typography
 
 ![Screenshot](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/screenshot.png?raw=true)
 
-> Chinese version of this document is coming soon. 本文档的中文翻译版即将上线。
+[点击这里阅读简体中文版使用文档](https://github.com/SumiMakito/hexo-theme-typography/blob/master/README_zh-CN.md)
 
 ## Install
 
