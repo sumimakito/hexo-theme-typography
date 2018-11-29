@@ -9,28 +9,57 @@ hexo-theme-Typography
 
 ## 安装
 
-### 安装依赖项
+### 依赖项
 
 请仔细阅读，再根据需要复制以下代码。
 
 ```bash
 cd hexo # 进入 Hexo 博客根目录
-npm install --save hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
+```
+
+#### Yarn 用户
+
+```bash
+yarn remove hexo-generator-category # 此处我们使用 hexo-generator-category-enhance
+yarn add hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
+yarn add hexo-prism-plugin # 语法高亮支持
+```
+
+#### Npm 用户
+
+```bash
 npm uninstall --save hexo-generator-category # 此处我们使用 hexo-generator-category-enhance
+npm install --save hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
+npm install --save hexo-prism-plugin # 语法高亮支持
+```
+
+### 安装主题
+
+```bash
 git clone https://github.com/SumiMakito/hexo-theme-typography themes/typography
 cd themes/typography
 npm install
+yarn install # yarn 用户
 ```
-
-> 如果你已经安装了 `hexo-renderer-jade`、`hexo-generator-category-enhance `、`hexo-generator-feed`、`hexo-generator-tag` 和 `hexo-generator-archive`，则此步骤可以跳过。
 
 ### 修改配置文件
 
-在 Hexo 根目录下的 `_config.yml` 中找到 `theme:` 并更改为 `theme: typography`，同时也可以在 `language:` 选项处更改语言。
-
-另外需在 `_config.yml` 后增加以下内容：（如存在则进行修改即可）
+请对博客根目录下的主配置文件 *_config.yml* 进行响应的改动。
 
 ```yaml
+theme: typography
+
+highlight:
+  enable: false # we will use the prism plugin instead
+
+plugin:
+  - hexo-generator-category-enhance
+  - hexo-generator-feed
+  - hexo-asset-image
+  - hexo-prism-plugin
+  - hexo-toc
+  # ... other plugins you'd like to enable
+
 # Generate archive page
 archive_generator:
   per_page: 0
@@ -54,6 +83,12 @@ feed:
   content:
   content_limit: 140
   content_limit_delim: ' '
+
+# For syntax highlighting
+prism_plugin:
+  mode: 'preprocess'
+  theme: 'default'
+  line_number: true 
 ```
 
 ## 更新
@@ -61,10 +96,10 @@ feed:
 ```bash
 cd themes/typography
 git pull
-npm run scss-compile
+# npm run scss-compile 已弃用
+npm run build
+yarn run build # yarn 用户
 ```
-
-> **推荐在每次更新后在主题目录下执行 `npm run scss-compile` 命令来重新生成 CSS 文件，尽管每次更新时 CSS 也会跟着更新。**
 
 > 如果你使用 `git` 管理整个博客，更新时可能会遇到 `modified: themes/typography` 错误。解决方案是从 GitHub 直接下载最新的 ZIP 压缩包并解压，而不是使用 `git pull`。
 
@@ -180,11 +215,14 @@ github: user_name
 
 ## 深入定制
 
+> 请编辑  *scss* 文件而不是 *css* 文件，进行调试时建议使用 `npm run watch`（或 `yarn run watch`）来对编辑后的 *scss* 文件进行自动编译，但请注意，`npm run watch` 不带有 Auto-prefixer 功能，建议在正式部署网站前运行带有 CSS 压缩及 Auto-prefixer 的 `npm run build`（或 `yarn run build`）以提高访问体验。
+
 「活版印字」主题使用 `node-sass` 和 `scss-compile` 来生成 `.css` 文件。我们也在里面留下了一些可定制的内容（如颜色和字体列表）。编辑结束时**不要忘记**运行以下命令来重新生成 `.css` 文件：
 
 ```bash
 cd themes/typography
-npm run scss-compile
+npm run build
+yarn run build # yarn 用户
 ```
 
 > `.scss` 文件在 `theme/typography/raw/scss` 目录下。
@@ -200,9 +238,9 @@ npm run scss-compile
 
 ## 支持开发者
 
-咱是一个几乎没有收入的个人学生开发者。
+咱是一个没有过多收入的学生开发者。
 
-如果你喜欢我的主题，欢迎打赏赞助咱一杯卡布奇诺，谢谢你。`_(:з」∠)_` 
+如果你喜欢我的主题，欢迎赞助我一杯焦糖玛奇朵，谢谢你。`_(:з」∠)_` 
 
 <img width="300" src="https://raw.githubusercontent.com/SumiMakito/Misc/master/wechat-2.png" alt="WeChat QR code">
 
