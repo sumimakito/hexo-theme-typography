@@ -13,9 +13,12 @@ hexo-theme-Typography
 
 *Do not simply copy and paste the whole block of codes, please take a carefully look in advance. :)*
 
+You may use either `yarn` or `npm` to install the dependencies.
+
 ```bash
 cd hexo # cd into the root directory of your Hexo blog
 npm install --save hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
+npm install --save hexo-prism-plugin # for syntax highlighting
 npm uninstall --save hexo-generator-category # use hexo-generator-category-enhance instead
 git clone https://github.com/SumiMakito/hexo-theme-typography themes/typography
 cd themes/typography
@@ -26,9 +29,22 @@ npm install
 
 ### Modify the config file
 
-Find `theme:` in your `_config.yml` at the root directory of your Hexo blog, and change that line into `theme: typography`, set `language` to `zh-cn` or `en` as you like , then add these lines:
+> To use Typography, some modifications on the your blog's root-level *_config.yml* is required.
 
 ```yaml
+theme: typography
+
+highlight:
+  enable: false # we will use the prism plugin instead
+
+plugin:
+  - hexo-generator-category-enhance
+  - hexo-generator-feed
+  - hexo-asset-image
+  - hexo-prism-plugin
+  - hexo-toc
+  # ... other plugins you'd like to enable
+
 # Generate archive page
 archive_generator:
   per_page: 0
@@ -52,6 +68,12 @@ feed:
   content:
   content_limit: 140
   content_limit_delim: ' '
+
+# For syntax highlighting
+prism_plugin:
+  mode: 'preprocess'
+  theme: 'default'
+  line_number: true 
 ```
 
 ## Update
@@ -59,10 +81,11 @@ feed:
 ```bash
 cd themes/typography
 git pull
-npm run scss-compile
+# npm run scss-compile :DEPRECATED
+npm run build
+# if you prefer to use yarn
+yarn run build
 ```
-
-> **We recommend you to run `npm run scss-compile` after each update, although CSS files will also be updated in each commit.**
 
 > You may encounter the error `modified: themes/typography` if you are managing the whole blog with `git`. In that case, instead of using `git push`, we recommend you to download the zip and update the theme manually.
 

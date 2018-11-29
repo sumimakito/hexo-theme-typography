@@ -1,12 +1,13 @@
 {
   "name": "hexo-theme-typography",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Rediscover the beauty of typography.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run scss-compile",
-    "scss-compile": "node-sass raw/scss/style.scss source/css/style.css && node-sass raw/scss/style-dark.scss source/css/style-dark.css",
-    "watch": "npm run scss-compile"
+    "test": "echo 'No tests' && exit",
+    "build": "node-sass raw/scss -o source/css --output-style compressed && postcss source/css -u autoprefixer -r",
+    "scss-compile": "npm run build",
+    "watch": "node-sass -w raw/scss -o source/css"
   },
   "repository": {
     "type": "git",
@@ -25,8 +26,11 @@
   "homepage": "https://github.com/SumiMakito/hexo-theme-typography/README.md",
   "devDependencies": {},
   "dependencies": {
-    "node-sass": "^4.5.3",
     "scss-compile": "^0.1.7",
-    "yamljs": "^0.3.0"
+    "yamljs": "^0.3.0",
+    "autoprefixer": "^9.2.0",
+    "node-sass": "^4.10.0",
+    "postcss": "^7.0.5",
+    "postcss-cli": "^6.0.0"
   }
 }
