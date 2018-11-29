@@ -7,29 +7,44 @@ hexo-theme-Typography
 
 [点击这里阅读简体中文版使用文档](https://github.com/SumiMakito/hexo-theme-typography/blob/master/README_zh-CN.md)
 
-## Install
+## Installing
 
-### Install dependencies
+### Prerequisite – Ensure the dependencies
 
 *Do not simply copy and paste the whole block of codes, please take a carefully look in advance. :)*
 
-You may use either `yarn` or `npm` to install the dependencies.
-
 ```bash
 cd hexo # cd into the root directory of your Hexo blog
+```
+
+#### Yarn users
+
+```bash
+yarn remove hexo-generator-category # we'll use hexo-generator-category-enhance instead
+yarn add hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
+yarn add hexo-prism-plugin # for syntax highlighting
+```
+
+#### Npm users
+
+```bash
+npm uninstall --save hexo-generator-category # we'll use hexo-generator-category-enhance instead
 npm install --save hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
 npm install --save hexo-prism-plugin # for syntax highlighting
-npm uninstall --save hexo-generator-category # use hexo-generator-category-enhance instead
+```
+
+### Installing the theme
+
+```bash
 git clone https://github.com/SumiMakito/hexo-theme-typography themes/typography
 cd themes/typography
 npm install
+yarn install # for yarn users
 ```
 
-> You can skip the second line provided you have already installed `hexo-renderer-jade` , `hexo-generator-category-enhance `, `hexo-generator-feed`, `hexo-generator-tag` and `hexo-generator-archive` in your Hexo blog's root directory.
+### Modifying the config file
 
-### Modify the config file
-
-> To use Typography, some modifications on the your blog's root-level *_config.yml* is required.
+> To use Typography, some modifications on the your blog's root-level *_config.yml* is necessary.
 
 ```yaml
 theme: typography
@@ -76,20 +91,19 @@ prism_plugin:
   line_number: true 
 ```
 
-## Update
+## Updating
 
 ```bash
 cd themes/typography
 git pull
-# npm run scss-compile :DEPRECATED
+# npm run scss-compile IS DEPRECATED
 npm run build
-# if you prefer to use yarn
-yarn run build
+yarn run build # for yarn users
 ```
 
 > You may encounter the error `modified: themes/typography` if you are managing the whole blog with `git`. In that case, instead of using `git push`, we recommend you to download the zip and update the theme manually.
 
-## Customize
+## Customizing
 
 Typography has packed up several labor-saving functions, thus you can easily make any change at any time in the `_config.yml` file located in the root directory of the theme.
 
@@ -207,7 +221,8 @@ Typography uses `node-sass` and `scss-compile` to generate `.css` files for styl
 
 ```bash
 cd themes/typography
-npm run scss-compile
+npm run build
+yarn run build # for yarn users
 ```
 
 > `.scss` files are located in `theme/typography/raw/scss`.
