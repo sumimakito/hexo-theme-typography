@@ -217,7 +217,7 @@ github: user_name
 
 ## Customize<sup>2</sup>
 
-> Please edit *scss* files instead of *css* files. We recommend you to run `npm run watch` (or `yarn run watch`) to watch changes on *scss* files. But plesae be noted that `npm run watch` does not provide auto-prefixing on compiled css files. Running `npm run build` (or `yarn run build`), which has support for CSS compressing and auto-prefixing, after your have done your modifications before deploying your blog is recommended. 
+> Please edit *scss* files instead of *css* files. We recommend you to run `npm run watch` (or `yarn run watch`) to watch changes on *scss* files. But plesae be noted that `npm run watch` does not provide auto-prefixing support on compiled css files. Running `npm run build` (or `yarn run build`), which has support for CSS compressing and auto-prefixing, after you have done your modifications and before deploying your blog is recommended. 
 
 Typography uses `node-sass` and `scss-compile` to generate `.css` files for styling. We have provided several options such as background and foreground colors for you to choose. When your editing is finished, **do not** forget to run the commands below to re-generate the `.css` files:
 
