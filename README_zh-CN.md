@@ -89,6 +89,9 @@ prism_plugin:
   mode: 'preprocess'
   theme: 'default'
   line_number: true 
+
+# 在页脚显示ICP备案号，不显示留空。
+icp: 
 ```
 
 ## 更新
