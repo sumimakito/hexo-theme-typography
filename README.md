@@ -1,6 +1,8 @@
 hexo-theme-Typography
 ======
 
+[Check out the demo](https://yueplus.ink)
+
 ![Head](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/head.png?raw=true)
 
 ![Screenshot](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/screenshot.png?raw=true)
