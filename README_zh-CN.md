@@ -200,6 +200,9 @@ desc: Description to be inserted into the metadata of the post page.
 
 「活版印字」主题支持以下社交账号：
 
+- E-mail
+- Steam
+- bilibili
 - Twitter
 - GitHub
 - Instagram
@@ -208,6 +211,9 @@ desc: Description to be inserted into the metadata of the post page.
 点亮这些图标十分简单，你只需要为它们设置好 ID 即可，图标的链接会自动生成。
 
 ```yaml
+email: 邮箱地址
+steam: steam用户名
+bilibili: bilibili UID
 twitter: user_name
 weibo: user_id/permanent_name
 instagram: user_name

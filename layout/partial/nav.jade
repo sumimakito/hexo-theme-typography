@@ -27,6 +27,15 @@ div#site-nav.site-title-links
         include ../mixins
         +make_page_links()
         li.soc
+            if theme.email
+                a(href="mailto:" + theme.email, target="_blank", rel="noopener noreferrer")
+                    i.fa.fa-envelope &nbsp;
+            if theme.bilibili
+                a(href="https://space.bilibili.com/" + theme.bilibili, target="_blank", rel="noopener noreferrer")
+                    span.iconfont.icon-CN_bilibiliB &nbsp;
+            if theme.steam
+                a(href="https://steamcommunity.com/id/" + theme.steam + "/", target="_blank", rel="noopener noreferrer")
+                    i.fa.fa-steam &nbsp;
             if theme.github
                 a(href="https://github.com/" + theme.github, target="_blank", rel="noopener noreferrer")
                     i.fa.fa-github &nbsp;

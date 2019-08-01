@@ -199,6 +199,9 @@ Then the generated HTML file will contain:
 
 Typography natively supports the following social network accounts:
 
+- E-mail
+- Steam
+- bilibili
 - Twitter
 - GitHub
 - Instagram
@@ -207,6 +210,9 @@ Typography natively supports the following social network accounts:
 To use light up those icons, just simply set the values for the corresponding options.
 
 ```yaml
+email: E-mail address
+steam: user name
+bilibili: bilibili UID
 twitter: user_name
 weibo: user_id/permanent_name
 instagram: user_name
