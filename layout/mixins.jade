@@ -6,8 +6,8 @@ mixin make_post(item, is_detail)
             else
                 a(href= url_for(item.path))= item.title
         p.post-meta
-            span.date.meta-item!=__("posted_at")+"&nbsp;" + date(item.date, 'YYYY-MM-DD HH:mm')
-            span.date.meta-item!=__("edited_at")+"&nbsp;" + date(item.updated, 'YYYY-MM-DD HH:mm')
+            span.date.meta-item!=__("posted_at")+"&nbsp;" + date(item.date, config.date_format + " " + config.time_format)
+            span.date.meta-item!=__("edited_at")+"&nbsp;" + date(item.updated, config.date_format + " " + config.time_format)
             if theme.duoshuo || theme.disqus
                 span.meta-item
                     i.fa.fa-comment-o
