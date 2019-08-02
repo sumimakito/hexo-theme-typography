@@ -530,7 +530,7 @@ figure {
   }
 
   .soc {
-    display: block !important;
+    //display: block !important;
   }
 
   .site-nav-footer {
@@ -700,7 +700,7 @@ figure {
   }
 
   .soc {
-    display: block !important;
+    //display: block !important;
   }
 
   .site-nav-footer {
@@ -710,4 +710,8 @@ figure {
   .site-bottom-footer {
     display: block !important;
   }
+}
+
+hr {
+  border-top: 2px solid $foregroundColor;
 }
