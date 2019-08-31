@@ -1,0 +1,19 @@
+share: 공유하기
+prev: 이전
+next: 다음
+prev_post: 이전 포스트
+next_post: 다음 포스트
+Home: 대문
+Albums: 앨범
+Categories: 카테고리
+Archive: 아카이브
+Tags: 태그
+About: About
+Links: 참고사이트
+Comments: 덧글
+posted_at: Posted at
+TagCount: '%d 개의 태그'
+ArchiveCount: '포스트 %d개'
+CategoriesCount: '포스트 %d개'
+PageCount: '%d'
+PageNumber: '총 %d 페이지'
