@@ -530,7 +530,7 @@ figure {
   }
 
   .soc {
-    //display: block !important;
+    display: block !important;
   }
 
   .site-nav-footer {
@@ -539,6 +539,10 @@ figure {
 
   .site-bottom-footer {
     display: block !important;
+  }
+
+  .share a {
+    padding: 0 3px !important;
   }
 
   li.soc {
@@ -700,7 +704,11 @@ figure {
   }
 
   .soc {
-    //display: block !important;
+    display: block !important;
+  }
+
+  .share a {
+    padding: 0 3px !important;
   }
 
   .site-nav-footer {
