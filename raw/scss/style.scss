@@ -326,6 +326,10 @@ a {
   }
 }
 
+.share a {
+  padding: 0 3px !important;
+}
+
 .meta-item {
   margin: 0 10px 0 0;
 }
@@ -705,10 +709,6 @@ figure {
 
   .soc {
     display: block !important;
-  }
-
-  .share a {
-    padding: 0 3px !important;
   }
 
   .site-nav-footer {
