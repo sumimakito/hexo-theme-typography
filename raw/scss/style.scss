@@ -1,5 +1,5 @@
-$backgroundColor: #ffffff;
-$foregroundColor: #2e405b;
+$backgroundColor: #ffffff !default;
+$foregroundColor: #2e405b !default;
 $fontList: "Source Sans Pro", "Roboto", "Helvetica", "Helvetica Neue",
   "Source Han Sans SC", "Source Han Sans TC", "PingFang SC", "PingFang HK",
   "PingFang TC", sans-serif;
@@ -326,6 +326,10 @@ a {
   }
 }
 
+.share a {
+  padding: 0 3px !important;
+}
+
 .meta-item {
   margin: 0 10px 0 0;
 }
@@ -541,6 +545,10 @@ figure {
     display: block !important;
   }
 
+  .share a {
+    padding: 0 3px !important;
+  }
+
   li.soc {
     margin-top: 5px !important;
   }
@@ -710,4 +718,8 @@ figure {
   .site-bottom-footer {
     display: block !important;
   }
+}
+
+hr {
+  border-top: 2px solid $foregroundColor;
 }

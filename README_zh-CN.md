@@ -1,6 +1,8 @@
 hexo-theme-Typography
 ======
 
+[点击查看演示](https://yueplus.ink)
+
 ![Head](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/head.png?raw=true)
 
 ![Screenshot](https://github.com/SumiMakito/hexo-theme-typography/blob/master/_art/screenshot.png?raw=true)
@@ -89,6 +91,9 @@ prism_plugin:
   mode: 'preprocess'
   theme: 'default'
   line_number: true 
+
+# 在页脚显示ICP备案号，不显示留空。
+icp: 
 ```
 
 ## 更新
@@ -197,6 +202,9 @@ desc: Description to be inserted into the metadata of the post page.
 
 「活版印字」主题支持以下社交账号：
 
+- E-mail
+- Steam
+- bilibili
 - Twitter
 - GitHub
 - Instagram
@@ -205,6 +213,9 @@ desc: Description to be inserted into the metadata of the post page.
 点亮这些图标十分简单，你只需要为它们设置好 ID 即可，图标的链接会自动生成。
 
 ```yaml
+email: 邮箱地址
+steam: steam用户名
+bilibili: bilibili UID
 twitter: user_name
 weibo: user_id/permanent_name
 instagram: user_name

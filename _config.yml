@@ -2,6 +2,9 @@ title_primary: "活版印字" # the bigger text
 title_secondary: "Typography" # the smaller text
 keywords:
 
+email: #E-mail address
+bilibili: #bilibili UID
+steam: #user name
 twitter: #username
 rss: atom.xml
 weibo: #username/id

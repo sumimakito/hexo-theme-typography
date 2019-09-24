@@ -1,0 +1,20 @@
+share: 共有
+prev: 前のページ
+next: 次のページ
+prev_post: 前の記事
+next_post: 次へ記事
+Home: 家
+Albums: 画廊
+Categories: 分類
+Archive: 書庫
+Tags: 付箋
+About: 私について
+Links: リンク
+Comments: コメント
+posted_at: 提出時
+edited_at: 変更時
+TagCount: '%d 記事'
+ArchiveCount: '%d 記事'
+CategoriesCount: '%d 記事'
+PageCount: '合計 %d ページ'
+PageNumber: '%d ページ'
