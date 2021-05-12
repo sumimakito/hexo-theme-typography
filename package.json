@@ -30,7 +30,7 @@
     "yamljs": "^0.3.0",
     "autoprefixer": "^9.2.0",
     "node-sass": "^4.10.0",
-    "postcss": "^7.0.5",
+    "postcss": "^8.2.10",
     "postcss-cli": "^6.0.0"
   }
 }
