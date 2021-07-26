@@ -28,19 +28,19 @@ div#site-nav.site-title-links
         +make_page_links()
         li.soc
             if theme.github
-                a(href="https://github.com/" + theme.github, target="_blank", rel="noopener noreferrer")
+                a(href="https://github.com/" + theme.github, target="_blank", rel="noopener noreferrer", aria-label="Github")
                     i.fa.fa-github &nbsp;
             if theme.twitter
-                a(href="https://twitter.com/" + theme.twitter, target="_blank", rel="noopener noreferrer")
+                a(href="https://twitter.com/" + theme.twitter, target="_blank", rel="noopener noreferrer", aria-label="Twitter")
                     i.fa.fa-twitter &nbsp;
             if theme.instagram
-                a(href="https://www.instagram.com/" + theme.instagram, target="_blank", rel="noopener noreferrer")
+                a(href="https://www.instagram.com/" + theme.instagram, target="_blank", rel="noopener noreferrer", aria-label="Instagram")
                     i.fa.fa-instagram &nbsp;
             if theme.weibo
-                a(href="http://weibo.com/u/" + theme.weibo, target="_blank", rel="noopener noreferrer")
+                a(href="http://weibo.com/u/" + theme.weibo, target="_blank", rel="noopener noreferrer", aria-label="Sina Weibo")
                     i.fa.fa-weibo &nbsp;
             if theme.rss
-                a(href=config.url + "/" + theme.rss, target="_blank", rel="noopener noreferrer")
+                a(href=config.url + "/" + theme.rss, target="_blank", rel="noopener noreferrer", aria-label="RSS")
                     i.fa.fa-rss &nbsp;
     div.visible-lg.visible-md.visible-sm.site-nav-footer
         br.site-nav-footer-br

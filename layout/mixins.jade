@@ -62,12 +62,12 @@ mixin make_pager()
                 span.pre.pagbuttons
                     i.fa.fa-angle-double-left
                     | &nbsp;
-                    a(role="navigation",href=url_for(prev))= __('prev')
+                    a(role="navigation",href=url_for(prev),aria-label= __('prev'))= __('prev')
 
                 if page.next
                 span &nbsp;
                 span.next.pagbuttons
-                    a(role="navigation",href=url_for(next))= __('next')
+                    a(role="navigation",href=url_for(next),aria-label=__('next'))= __('next')
                     | &nbsp;
                     i.fa.fa-angle-double-right
 
