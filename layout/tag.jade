@@ -9,11 +9,12 @@ block description
 
 block content
     .autopagerize_page_element: .content
+        p.post-title
+            != __("Tags")+' ' + page.tag
         .archive.animated.fadeInDown
             ul.list-with-title
-                p.post-title
-                    != __("Tags")+' ' + page.tag
                 include mixins
                 +postList()
+            .controller
                 include mixins
                 +make_pager(__('prev'), __('next'))

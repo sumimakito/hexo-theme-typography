@@ -9,10 +9,10 @@ block description
 
 block content
     .autopagerize_page_element: .content
+        p.post-title
+            != __("Archive") + ' ' + __('ArchiveCount', site.posts.length)
         .archive.animated.fadeInDown
             ul.list-with-title
-                p.post-title
-                    != __("Archive") + ' ' + __('ArchiveCount', site.posts.length)
                 include mixins
                 +postList()
         if config.archive_generator.per_page

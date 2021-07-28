@@ -10,9 +10,7 @@ block description
 block content
     .autopagerize_page_element: .content
         .archive.animated.fadeInDown
-            ul.list-with-title
-                p.post-title
-                    != __("Categories")
-                include mixins
-                +categoryList()
-                
+            p.post-title
+                != __("Categories")
+            include mixins
+            +categoryList()

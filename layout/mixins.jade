@@ -62,63 +62,66 @@ mixin make_pager()
                 span.pre.pagbuttons
                     i.fa.fa-angle-double-left
                     | &nbsp;
-                    a(role="navigation",href=url_for(prev))= __('prev')
+                    a(role="navigation",href=url_for(prev),aria-label= __('prev'))= __('prev')
 
                 if page.next
                 span &nbsp;
                 span.next.pagbuttons
-                    a(role="navigation",href=url_for(next))= __('next')
+                    a(role="navigation",href=url_for(next),aria-label=__('next'))= __('next')
                     | &nbsp;
                     i.fa.fa-angle-double-right
 
 mixin postList()
-    .archive
-        - var year = 0;
-        - var change = false;
-        - var firstYear = true;
-        - page.posts.each(function (item) {
-        - var itemYear = date(item.date, 'YYYY') - 0;
-        - change = year !== itemYear;
-        - year = change ? itemYear : year;
-        if change
-            if firstYear
-                | <div class="listing-title">
-                h4.ar-year!= year
-                | </div><ul class="listing">
-                - firstYear = false;
-            else
-                | </ul><div class="listing-title">
-                h4.ar-year!= year
-                | </div><ul class="listing">
+    - var year = 0;
+    - var change = false;
+    - var firstYear = true;
+    - var fixupRequired = page.posts.length > 0;
+    - page.posts.each(function (item) {
+    - var itemYear = date(item.date, 'YYYY') - 0;
+    - change = year !== itemYear;
+    - year = change ? itemYear : year;
+    if change
+        if firstYear
+            | <li class="listing-title">
+            h4.ar-year!= year
+            | <ul class="listing">
+            - firstYear = false;
+        else
+            | </ul></li><li class="listing-title">
+            h4.ar-year!= year
+            | <ul class="listing">
 
-        .listing-item
-            .listing-post
-                p.post-title
-                    a(href= url_for(item.path), title= item.title)= item.title
-                div.post-time
-                    span.ar-date= date(item.date, 'MM-DD')
-        - })
+    | <li class="listing-item">
+    .listing-post
+        p.post-title
+            a(href= url_for(item.path), title= item.title)= item.title
+        div.post-time
+            span.ar-date= date(item.date, 'MM-DD')
+    | </li>
+    - })
+    if fixupRequired
+        | </ul></li>
 
 mixin tagList()
-    .archive
     ul.listing
         - site.tags.each(function (item) {    
-        .listing-item
-            .listing-post
-                p.post-title
-                    a(href= url_for(item.path), title= item.name)= item.name
-                span.date.meta-item
-                    != __('TagCount', item.posts.length)
+        | <li class="listing-item">
+        .listing-post
+            p.post-title
+                a(href= url_for(item.path), title= item.name)= item.name
+            span.date.meta-item
+                != __('TagCount', item.posts.length)
+        | </li>
         - })
 
 mixin categoryList()
-    .archive
     ul.listing
         - site.categories.each(function (item) {    
-        .listing-item
-            .listing-post
-                p.post-title
-                    a(href= url_for(item.path), title= item.name)= item.name
-                span.date.meta-item
-                    != __('CategoriesCount', item.posts.length)
+        | <li class="listing-item">
+        .listing-post
+            p.post-title
+                a(href= url_for(item.path), title= item.name)= item.name
+            span.date.meta-item
+                != __('CategoriesCount', item.posts.length)
+        | </li>
         - })
