@@ -14,6 +14,13 @@ livere: # [data-uid] on livere.com
 disqus: # [short_name] on disqus.com
 dove: # For fun ONLY. Set to true to 'disable' comments on your site.
 
+# Fill ALL of the following to use utterances.
+# See utteranc.es for detail.
+utterancesRepo: # Choose the repository utterances will connect to.
+utterancesIssueTerm: # Choose the mapping between blog posts and GitHub issues.
+utterancesLabel: # Choose the label that will be assigned to issues created by Utterances.
+utterancesTheme: # Choose an Utterances theme that matches your blog.
+
 # Set true to show the page indicator.
 showPageCount: true
 
