@@ -140,9 +140,9 @@ themeStyle: light
 
 ### Set up the comment service
 
-The comment box is a place for readers to exchange their ideas with the author. Typography has integrated two 3rd-party comment services, and they are ready to use at any time.
+The comment box is a place for readers to exchange their ideas with the author. Typography has integrated three 3rd-party comment services, and they are ready to use at any time.
 
-Currently, Typography supports comment services provided by [Disqus](https://disqus.com/) and [LiveRe](https://livere.com/). The only thing you need to do is to set the corresponding key for the comment service that you would like to use.
+Currently, Typography supports comment services provided by [Disqus](https://disqus.com/)/ [LiveRe](https://livere.com/)/[Utterances](https://utteranc.es/). The only thing you need to do is to set the corresponding key for the comment service that you would like to use.
 
 e.g. `disqus: disqus_shortname` OR `livere: livere_data_uid`
 

@@ -30,6 +30,17 @@ if theme.livere
             })(document, 'script');
         noscript  Please activate JavaScript for write a comment in LiveRe
 
+if theme.utterancesRepo
+    a#comments
+    script(src="https://utteranc.es/client.js"
+        repo="#{theme.utterancesRepo}"
+        issue-term="#{theme.utterancesIssueTerm}"
+        label="#{theme.utterancesLabel}"
+        theme="#{theme.utterancesTheme}"
+        crossorigin="anonymous"
+        async)
+    div(class="utterances")
+
 if theme.dove
     if theme.dove === true
         - var domain = "Null";

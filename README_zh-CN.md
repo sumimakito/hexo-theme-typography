@@ -140,7 +140,7 @@ yarn run build # yarn 用户
 
 评论系统在与读者互动时显得尤为重要，「活版印字」主题也整合了多个第三方评论服务，只需要设置好各平台提供的 ID 便可使用。
 
-目前支持 [Disqus](https://disqus.com/) 以及 [LiveRe](https://livere.com/) 提供的评论服务。
+目前支持 [Disqus](https://disqus.com/)、[LiveRe](https://livere.com/) 以及 [Utterances](https://utteranc.es/) 提供的评论服务。
 
 例如：`disqus: disqus_shortname` **或** `livere: livere_data_uid`
 
