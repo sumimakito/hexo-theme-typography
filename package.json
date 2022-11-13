@@ -28,9 +28,9 @@
   "dependencies": {
     "scss-compile": "^0.1.7",
     "yamljs": "^0.3.0",
-    "autoprefixer": "^9.2.0",
-    "node-sass": "^4.10.0",
-    "postcss": "^7.0.5",
-    "postcss-cli": "^6.0.0"
+    "autoprefixer": "^10.4.13",
+    "node-sass": "^8.0.0",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.0.0"
   }
 }
