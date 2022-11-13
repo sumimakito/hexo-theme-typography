@@ -96,7 +96,6 @@ prism_plugin:
 ```bash
 cd themes/typography
 git pull
-# npm run scss-compile 已弃用
 npm run build
 yarn run build # yarn 用户
 ```

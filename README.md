@@ -96,7 +96,6 @@ prism_plugin:
 ```bash
 cd themes/typography
 git pull
-# npm run scss-compile IS DEPRECATED
 npm run build
 yarn run build # for yarn users
 ```
