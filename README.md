@@ -21,7 +21,7 @@ cd hexo # cd into the root directory of your Hexo blog
 
 ```bash
 yarn remove hexo-generator-category # we'll use hexo-generator-category-enhance instead
-yarn add hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
+yarn add hexo-renderer-pug hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
 yarn add hexo-prism-plugin # for syntax highlighting
 ```
 
@@ -29,7 +29,7 @@ yarn add hexo-prism-plugin # for syntax highlighting
 
 ```bash
 npm uninstall --save hexo-generator-category # we'll use hexo-generator-category-enhance instead
-npm install --save hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
+npm install --save hexo-renderer-pug hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
 npm install --save hexo-prism-plugin # for syntax highlighting
 ```
 
@@ -231,7 +231,7 @@ yarn run build # for yarn users
 
 ## Customize<sup>3</sup>
 
-As for the jade templates inside `theme/typography/layout`, just edit them and remember to add some pepper as you like it.
+As for the pug templates inside `theme/typography/layout`, just edit them and remember to add some pepper as you like it.
 
 ## Contributors
 

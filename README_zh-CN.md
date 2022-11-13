@@ -21,7 +21,7 @@ cd hexo # 进入 Hexo 博客根目录
 
 ```bash
 yarn remove hexo-generator-category # 此处我们使用 hexo-generator-category-enhance
-yarn add hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
+yarn add hexo-renderer-pug hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
 yarn add hexo-prism-plugin # 语法高亮支持
 ```
 
@@ -29,7 +29,7 @@ yarn add hexo-prism-plugin # 语法高亮支持
 
 ```bash
 npm uninstall --save hexo-generator-category # 此处我们使用 hexo-generator-category-enhance
-npm install --save hexo-renderer-jade hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
+npm install --save hexo-renderer-pug hexo-generator-archive hexo-generator-category-enhance hexo-generator-feed hexo-generator-tag
 npm install --save hexo-prism-plugin # 语法高亮支持
 ```
 
@@ -229,7 +229,7 @@ yarn run build # yarn 用户
 
 ## 更深入定制
 
-所有的 `.jade` 模板都在 `theme/typography/layout` 目录下，怎么编辑和处置随你喜欢啦。
+所有的 `.pug` 模板都在 `theme/typography/layout` 目录下，怎么编辑和处置随你喜欢啦。
 
 ## 贡献者
 
