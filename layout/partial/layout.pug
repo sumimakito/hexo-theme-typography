@@ -21,3 +21,9 @@ html(lang="zh-CN")
         script(src= url_for('js/google-analytics.js'))
         script(src= url_for('js/typography.js'))
 
+        if(theme.hitokoto)
+            script()
+                |function hitokoto(){$("#hitokoto").html("&nbsp;");$.get("
+                = theme.hitokoto.api
+                |",{},function(response){$("#hitokoto").html(response.hitokoto)},"JSON");}hitokoto()
+

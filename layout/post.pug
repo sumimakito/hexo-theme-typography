@@ -6,7 +6,7 @@ block site_title
     != page.title + " · " + config.title
 
 block description
-    - var desc = page.desc || strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150);
+    - var desc = page.desc || strip_html(page.description) || strip_html(page.excerpt) || strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150);
     meta(name="description", content=desc)
     meta(name="og:description", content=desc)
     meta(name="twitter:site", content=config.title)

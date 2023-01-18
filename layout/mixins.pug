@@ -35,7 +35,12 @@ mixin make_post(item, is_detail)
         if is_detail
             p.post-abstract!= item.content
         else
-            p.post-abstract!= truncate(strip_html(item.content.replace(/<pre(?: |>)[^]*?<\/pre>/gm, ' ')), {length: 160})
+            if item.description
+                p.post-abstract!= item.description
+            else if item.excerpt
+                p.post-abstract!= item.excerpt
+            else
+                p.post-abstract!= truncate(strip_html(item.content.replace(/<pre(?: |>)[^]*?<\/pre>/gm, ' ')), {length: theme.truncate_len ? theme.truncate_len : 160})
 
 mixin make_page_links()
     if site.pages
