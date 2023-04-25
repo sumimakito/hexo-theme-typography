@@ -7,7 +7,7 @@ mixin make_post(item, is_detail)
                 a(href= url_for(item.path))= item.title
         p.post-meta
             span.date.meta-item!=__("posted_at")+"&nbsp;" + date(item.date, 'YYYY-MM-DD')
-            if theme.duoshuo || theme.disqus
+            if theme.livere || theme.disqus
                 span.meta-item
                     i.fa.fa-comment-o
                     span &nbsp;
