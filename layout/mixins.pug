@@ -32,6 +32,9 @@ mixin make_post(item, is_detail)
                             a.a-tag(href=config.root + item.path, title= item.name)= item.name
                             span &nbsp;
                             - });
+        if theme.toc.enable
+            span= _p('ToC')
+            .toc!= toc(page.content, {min_depth: theme.toc.min_depth, max_depth: theme.toc.max_depth, list_number: theme.toc.list_number})
         if is_detail
             p.post-abstract!= item.content
         else
