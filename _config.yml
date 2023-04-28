@@ -12,8 +12,6 @@ tag:
 
 toc:
   enable: true
-  min_depth: 1  # Minimum heading depth of generated toc
-  max_depth: 6  # Maximum heading depth of generated toc
   list_number: false  # Displays list number
 
 twitter: #username
