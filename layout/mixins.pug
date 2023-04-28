@@ -7,7 +7,7 @@ mixin make_post(item, is_detail)
                 a(href= url_for(item.path))= item.title
         p.post-meta
             span.date.meta-item!=__("posted_at")+"&nbsp;" + date(item.date, 'YYYY-MM-DD')
-            if theme.duoshuo || theme.disqus
+            if theme.livere || theme.disqus
                 span.meta-item
                     i.fa.fa-comment-o
                     span &nbsp;
@@ -32,6 +32,9 @@ mixin make_post(item, is_detail)
                             a.a-tag(href=config.root + item.path, title= item.name)= item.name
                             span &nbsp;
                             - });
+        if theme.toc.enable
+            span= _p('ToC')
+            .toc!= toc(page.content, {list_number: theme.toc.list_number})
         if is_detail
             p.post-abstract!= item.content
         else
@@ -103,20 +106,14 @@ mixin postList()
         | </ul></li>
 
 mixin tagList()
-    ul.listing
-        - site.tags.each(function (item) {    
-        | <li class="listing-item">
-        .listing-post
-            p.post-title
-                a(href= url_for(item.path), title= item.name)= item.name
-            span.date.meta-item
-                != __('TagCount', item.posts.length)
-        | </li>
-        - })
+    .tag-cloud__title= page.title
+        |  -
+        span.tag-cloud__amount= site.tags.length
+    .tag-cloud-tags!= tagcloud({min_font: theme.tag.min_font, max_font: theme.tag.max_font, amout: theme.tag.amount, color: true, start_color: theme.tag.start_color, end_color: theme.tag.end_color, show_count: theme.tag.show_count})
 
 mixin categoryList()
     ul.listing
-        - site.categories.each(function (item) {    
+        - site.categories.each(function (item) {
         | <li class="listing-item">
         .listing-post
             p.post-title

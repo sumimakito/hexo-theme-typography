@@ -2,6 +2,18 @@ title_primary: "活版印字" # the bigger text
 title_secondary: "Typography" # the smaller text
 keywords:
 
+tag:
+  min_font: 18 # Minimum font size
+  max_font: 25 # Maximum font size
+  start_color: '#0073e6'
+  end_color: '#003366'
+  show_count: true # Display the number of posts for each tag
+  amount: # Total amount of tags. Default: unlimited
+
+toc:
+  enable: true
+  list_number: false  # Displays list number
+
 twitter: #username
 rss: atom.xml
 weibo: #username/id
